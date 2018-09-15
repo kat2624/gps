@@ -1,4 +1,4 @@
-package com.example.andy.gpskotlin11
+package com.example.andy.gpskotlin11.ui.view
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -18,6 +18,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.andy.gpskotlin11.R
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -25,7 +26,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import kotlinx.android.synthetic.main.activity_maps.*
 import kotlinx.android.synthetic.main.login_activity.*
 
 private const val PERMISSION_REQUEST = 10
@@ -40,8 +40,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private var locationGps: Location? = null
     private var locationNetwork: Location? = null
 
-    var latti : Double? = null
-    var longi : Double? = null
+    var latti: Double? = null
+    var longi: Double? = null
 
     var x = 1
 
@@ -168,7 +168,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                             latti = locationGps!!.latitude
                             longi = locationGps!!.longitude
 
-                            Log.i("Coordinates gps 1", "x= "+longi+latti)
+                            Log.i("Coordinates gps 1", "x= " + longi + latti)
 //                            tv_result.append("\nGPS ")
 //                            tv_result.append("\nLatitude : " + locationGps!!.latitude)
 //                            tv_result.append("\nLongitude : " + locationGps!!.longitude)
@@ -205,7 +205,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                             latti = locationNetwork!!.latitude
                             longi = locationNetwork!!.longitude
 
-                            Log.i("Coordinates network", "x= "+longi+latti)
+                            Log.i("Coordinates network", "x= " + longi + latti)
 //                            tv_result.append("\nNetwork ")
 //                            tv_result.append("\nLatitude : " + locationNetwork!!.latitude)
 //                            tv_result.append("\nLongitude : " + locationNetwork!!.longitude)
@@ -239,7 +239,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     latti = locationNetwork!!.latitude
                     longi = locationNetwork!!.longitude
 
-                    Log.i("Coordinates network", "x= "+longi+latti)
+                    Log.i("Coordinates network", "x= " + longi + latti)
 //                    tv_result.append("\nNetwork ")
 //                    tv_result.append("\nLatitude : " + locationNetwork!!.latitude)
 //                    tv_result.append("\nLongitude : " + locationNetwork!!.longitude)
@@ -250,7 +250,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     latti = locationGps!!.latitude
                     longi = locationGps!!.longitude
 
-                    Log.i("Coordinates Gps 2", "x= "+longi+latti)
+                    Log.i("Coordinates Gps 2", "x= " + longi + latti)
 //                    tv_result.append("\nGPS ")
 //                    tv_result.append("\nLatitude : " + locationGps!!.latitude)
 //                    tv_result.append("\nLongitude : " + locationGps!!.longitude)
